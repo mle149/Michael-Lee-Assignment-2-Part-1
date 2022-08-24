@@ -1,0 +1,16 @@
+/* Color Palette
+Red #e63946
+Off-White #f1faee
+Light Blue #a8dadc 
+Blue #457b9d
+Navy Blue #1d3557
+*/
+
+.navigation-menu{
+   font-size: large;
+   color: #1d3557;
+   font-weight: bold;
+   background-color: #a8dadc;
+   list-style: none;
+   list-style-type: none;
+}
