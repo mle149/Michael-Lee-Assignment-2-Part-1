@@ -6,11 +6,19 @@ Blue #457b9d
 Navy Blue #1d3557
 */
 
-.navigation-menu{
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+header{
    font-size: large;
    color: #1d3557;
    font-weight: bold;
    background-color: #a8dadc;
    list-style: none;
    list-style-type: none;
+}
+
+.logo{
+    float: left;
 }
