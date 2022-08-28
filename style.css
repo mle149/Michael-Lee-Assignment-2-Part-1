@@ -12,7 +12,6 @@ Navy Blue #1d3557
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-
 .container{
     width: 100%;
     margin: 0 auto;
@@ -34,6 +33,7 @@ header::after{
 body {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 .logo{
@@ -87,34 +87,31 @@ nav a:hover::before {
     width: 100%;
 }
 
-footer{
-    margin-top: auto;
+footer{ /*general settings for footer used on all pages */
     width: 100%;
-    height: 18%;
     padding: 10px 15%;
-    background: #333;
-    color: #efefef;
+    background: #a8dadc;
+    color: #1d3557;
     display: flex;
-    position: fixed;
-    bottom: 0;
+    margin-top: auto;
 }
 
-footer div {
+ footer div { /*all text elements in the footer to be centered */
     text-align: center;
 }
 
-.col-1 a {
+.col-1 a { /* Settings for links in footer */
     display: block;
     text-decoration: none;
-    color: #efefef;
+    color: #1d3557;
     margin-bottom: 10px;
 }
 
-.col-2 {
+.col-2 {  /*making the newsletter section larger than the two other columns in footer */
     flex-grow: 2;
 }
 
-form input {
+form input { /*Input box for newsletter */
     width: 400px;
     height: 45px;
     border-radius: 4px;
@@ -125,14 +122,14 @@ form input {
     border: none;
 }
 
-form button {
+form button { /*Button for newsletter */
     background: transparent;
-    border: 2px solid #fff;
-    color: #fff;
+    border: 2px solid #1d3557;
+    color: #1d3557;
     border-radius: 30px;
     padding: 10px 30px;
     font-size: 15px;
-    cursor: pointer;
+    cursor: pointer; /*Causes pointer/hand icon to appear when mouse is hovered over the button */
 }
 
 footer div h3 {
@@ -141,11 +138,28 @@ footer div h3 {
     letter-spacing: 1px;
 }
 
-.social-icons {
+.social-icons {  /*positioning the social media icons on the footer */
     margin-top: 30px;
 }
-.social-icons i {
+.social-icons i { /* changing size of icons */
     font-size: 22px;
     margin: 10px;
-    cursor: pointer;
+    cursor: pointer; /*pointer/hand icon to appear when mouse is hovered over the button */
+}
+
+/* Food menu text-overlay */
+.food-menu-container {
+    display: flex;
+    max-width: 100%;
+    background-color: blueviolet;
+    align-items: center;
+    justify-content: center;
+}
+
+.drinks-menu-container {
+    display: flex;
+    background-color: darkorange;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
 }
