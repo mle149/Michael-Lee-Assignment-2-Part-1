@@ -150,16 +150,87 @@ footer div h3 {
 /* Food menu text-overlay */
 .food-menu-container {
     display: flex;
-    max-width: 100%;
-    background-color: blueviolet;
+    width: 750px;
+    height: 400px;
+    overflow: hidden;
+    border: 2px solid #a8dadc;
     align-items: center;
-    justify-content: center;
+    justify-items: center;
+    position: relative;
+    text-align: center;
+    color: white;
+    margin: 0 auto;
+}
+
+.food-menu-container::before{
+    content: "";
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(211, 211, 211, 0.4);
+}
+
+#our-menu-text {
+    color: #1d3557;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    opacity: 1;
+    letter-spacing: 0.5em;   
 }
 
 .drinks-menu-container {
     display: flex;
-    background-color: darkorange;
-    max-width: 100%;
+    width: 750px;
+    height: 400px;
+    overflow: hidden;
+    border: 2px solid #a8dadc;
     align-items: center;
     justify-content: center;
+    position: relative;
+    text-align: center;
+    color: white;
+    margin: 0 auto;
+}
+
+.drinks-menu-container::before{
+    content: "";
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(211, 211, 211, 0.4);
+}
+
+.block {
+    position: relative;
+    height: 10vh;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 5px;
+}
+
+/* Reservation form styling */
+.reservation-form {
+    display: block;
+    margin-top: 5vh;
+}
+/* Make Title and paragraph one below the other and centered */
+.reservation-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
