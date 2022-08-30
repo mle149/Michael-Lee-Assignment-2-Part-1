@@ -6,12 +6,15 @@ Blue #457b9d
 Navy Blue #1d3557
 */
 
+/* Univeral styling */
 *{
     margin:0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+
+/* Header container on each page */
 .container{
     width: 100%;
     margin: 0 auto;
@@ -173,10 +176,6 @@ footer div h3 {
     background-color: rgba(211, 211, 211, 0.4);
 }
 
-#our-menu-text {
-    color: #1d3557;
-}
-
 .overlay-text {
     position: absolute;
     top: 50%;
@@ -211,7 +210,7 @@ footer div h3 {
     left: 0px;
     background-color: rgba(211, 211, 211, 0.4);
 }
-
+/* Reservations spacer blocks above and below the reservation form */
 .block {
     position: relative;
     height: 10vh;
@@ -227,10 +226,79 @@ footer div h3 {
     display: block;
     margin-top: 5vh;
 }
-/* Make Title and paragraph one below the other and centered */
-.reservation-text {
+/* Standard styling for p elements site-wide. Center text in the middle of page */
+p {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+/* Standard styling for site-wide H1 Heading Elements */
+h1 {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: #1d3557;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+}
+
+
+
+/* Opening Hours background img and text positioning */
+.overlay__hours {
+    --bg-image: url("images/kitchen__hours.jpg");
+    --bg-image-opacity: .6;
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    place-content: center;
+    min-height: 500px;
+    text-align: center;
+    color: #1d3557;
+    font-size: 2em;
+    
+}
+/* Pseudo element to create an opaque background img for Opening Hours*/
+.overlay__hours::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: var(--bg-image-opacity);
+}
+
+/* Contacts Page */
+/* container for content in the body of page */
+.contact__container {
+    display: flex;
+    justify-content:center;
+    background-color: #f1faee;
+}
+/* Container for google maps and address text */
+.address__contact {
+    margin-left: -2em;
+    margin-right: 5em;
+}
+/* Address above Google Maps embed */
+.address__contact p {
+    display: block; /*Override the display flex set for <p> elements*/
+    font-size:large;
+    text-align: left;
+    color: #1d3557;
+}
+
+.details__contact {
+    line-height: 1.5;
+}
+
+.details__contact p {
+    display: block;
+}
+
+.details__contact .social-icons {
+    margin-top: 0;
 }
