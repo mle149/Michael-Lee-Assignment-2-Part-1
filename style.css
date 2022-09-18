@@ -33,25 +33,26 @@ header::after{
     clear: both;
 }
 
+/* Styling for all body elements on the web page. Flex column used to push the footer to the bottom of the page */
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
-
+/* Logo img inserted in Header of each page */
 .logo{
     float: left;
     padding-bottom: 5px;
     max-height: 100px;
     max-width: 100px;
 }
-
+/* Positions the navigation menu correctly inside the header container */
 nav{
     margin-top: 20px;
     margin-right: 20px;
     float: right;
 }
-
+/* Remove the bullet points from the unorganised list */
 nav ul{
     list-style: none;
     margin: 0;
@@ -64,17 +65,17 @@ nav li{
     padding-top: 0px;
     position: relative;
 }
-
+/* Styling for hyperlinks in nav bar */
 nav a {
     color: #444;
     text-decoration: none;
     text-transform: uppercase;
 }
-
+/* Change colour of the bar animated bar when hover over a nav item */
 nav a:hover{
     color: #000;
 }
-
+/* Styling for animated bar to appear */
 nav a::before {
     content: '';
     display: block;
@@ -175,7 +176,7 @@ footer div h3 {
     left: 0px;
     background-color: rgba(211, 211, 211, 0.4);
 }
-
+/* Food (Kai) and Drinks (Inu) text settings for Menu Page */
 .overlay-text {
     position: absolute;
     top: 50%;
@@ -185,7 +186,7 @@ footer div h3 {
     opacity: 1;
     letter-spacing: 0.5em;   
 }
-
+/* Container to hold the drinks img & text overlay */
 .drinks-menu-container {
     display: flex;
     width: 750px;
@@ -242,9 +243,6 @@ h1 {
     margin-top: 5vh;
     margin-bottom: 2vh;
 }
-
-
-
 /* Opening Hours background img and text positioning */
 .overlay__hours {
     --bg-image: url("images/kitchen__hours.jpg");
@@ -256,8 +254,8 @@ h1 {
     min-height: 500px;
     text-align: center;
     color: #1d3557;
-    font-size: 2em;
-    
+    font-size: 2.5em;
+    font-weight: bold;
 }
 /* Pseudo element to create an opaque background img for Opening Hours*/
 .overlay__hours::after {
@@ -270,8 +268,8 @@ h1 {
     z-index: -1;
     opacity: var(--bg-image-opacity);
 }
+/* CONTACTS PAGE */
 
-/* Contacts Page */
 /* container for content in the body of page */
 .contact__container {
     display: flex;
@@ -290,15 +288,46 @@ h1 {
     text-align: left;
     color: #1d3557;
 }
-
+/* Adjust spacing for the Phone, email, and social media container */
 .details__contact {
     line-height: 1.5;
 }
-
+/* Make paragraphs stack underneath one another by default */
 .details__contact p {
     display: block;
 }
-
+/* Move the social media icons closer to 'Social Media' text */
 .details__contact .social-icons {
     margin-top: 0;
 }
+/* Text in 'Our Story' */
+.our__story {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+/* HOME PAGE */
+
+/* Settings for container holding the 3 images on Home page */
+.main__images {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 2%;
+}
+
+.main__images img{  
+    height: 25em;
+    padding: 5px; 
+}
+/* Media query to adjust imgs to column view when on a smaller screen */
+@media only screen and (max-width: 800px) {
+    body {
+      background-color: lightblue;
+      
+    }
+    .main__images{
+        flex-direction: column;
+    }
+  }
